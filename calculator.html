@@ -1,48 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculator</title>
+<head>
+    <title>Simple Calculator</title>
 
-        <body>
-            <h2>Simple Calculator</h2>
-            <input type="number" id="num1" placeholder="First Number">
-            <input type="number" id="num2" placeholder="Second Number">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-            <br><br>
-            <button onclick="add()">Addition</button>
-            <button onclick="sub()">Subtraction</button>  
-            <button onclick="mul()">Multiplication</button>  
-            <button onclick="div()">Division</button>  
-            <h3 id="result"></h3>
+        .calculator {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 320px;
+        }
 
-            <script>
-                function add() {
-                    let a = Number(document.getElementById("num1").value);
-                    let b = Number(document.getElementById("num2").value);
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-                    document.getElementById("result").innerHTML = "Sum =" + (a + b);
-                }
-                function sub() {
-                    let a = Number(document.getElementById("num1").value);
-                    let b = Number(document.getElementById("num2").value);
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
 
-                    document.getElementById("result").innerHTML = "Sub =" + (a - b);
-                } 
-                function mul() {
-                    let a = Number(document.getElementById("num1").value);
-                    let b = Number(document.getElementById("num2").value);
+        input:focus {
+            border-color: #4CAF50;
+        }
 
-                    document.getElementById("result").innerHTML = "Mul =" + (a * b);
-                } 
-                function div() {
-                    let a = Number(document.getElementById("num1").value);
-                    let b = Number(document.getElementById("num2").value);
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #4CAF50;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-                    document.getElementById("result").innerHTML = "Div =" + (a / b);
-                } 
-            
+        button:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
 
-            </script>
-            </body>
-            </html>
+        #result {
+            margin-top: 20px;
+            color: #222;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
 
+<body>
+
+    <div class="calculator">
+        <h2>Simple Calculator</h2>
+
+        <input type="number" id="num1" placeholder="First Number">
+        <input type="number" id="num2" placeholder="Second Number">
+
+        <br><br>
+
+        <button onclick="add()">Addition</button>
+        <button onclick="sub()">Subtraction</button>
+        <button onclick="mul()">Multiplication</button>
+        <button onclick="div()">Division</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function add() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Sum = " + (a + b);
+        }
+
+        function sub() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Sub = " + (a - b);
+        }
+
+        function mul() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Mul = " + (a * b);
+        }
+
+        function div() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            if (b === 0) {
+                document.getElementById("result").innerHTML = "Cannot divide by zero";
+            } else {
+                document.getElementById("result").innerHTML = "Div = " + (a / b);
+            }
+        }
+    </script>
+
+</body>
+</html>
