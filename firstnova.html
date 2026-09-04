@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechNova Solutions</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    line-height:1.6;
+}
+
+header{
+    background:#0d47a1;
+    color:white;
+    padding:15px 0;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ff9800;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#e68900;
+}
+
+.about{
+    padding:60px;
+    text-align:center;
+}
+
+.about h2{
+    margin-bottom:20px;
+    color:#0d47a1;
+}
+
+.services{
+    padding:60px;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+.service-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0d47a1;
+}
+
+.contact{
+    padding:60px;
+    text-align:center;
+}
+
+form{
+    width:400px;
+    max-width:90%;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#0d47a1;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#1565c0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.hero-content h1{
+    font-size:35px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<div class="container">
+<h2 class="logo">TechNova</h2>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Building Digital Solutions for Your Business</h1>
+<p>We provide innovative software, web development, and IT consulting services.</p>
+<a href="https://www.google.com/" class="btn">Get Started</a>
+</div>
+</section>
+
+<section id="about" class="about">
+<div class="container">
+<h2>About Us</h2>
+
+<p>
+TechNova Solutions is a technology company specializing in web development, mobile applications, cloud solutions, and digital transformation. Our mission is to help businesses grow through modern technology.
+</p>
+
+</div>
+</section>
+
+<section id="services" class="services">
+<h2>Our Services</h2>
+
+<div class="service-container">
+
+<div class="card">
+<h3>Web Development</h3>
+<p>Responsive websites using HTML, CSS, JavaScript, React, and modern technologies.</p>
+</div>
+
+<div class="card">
+<h3>Mobile Apps</h3>
+<p>Android and iOS application development with modern UI and high performance.</p>
+</div>
+
+<div class="card">
+<h3>Cloud Solutions</h3>
+<p>Cloud migration, Microsoft Azure, Office 365, and Power Platform services.</p>
+</div>
+
+</div>
+</section>
+<!-- Contact -->
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <form>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 TechNova Solutions | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
